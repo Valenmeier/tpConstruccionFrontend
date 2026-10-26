@@ -1,0 +1,20 @@
+.fila {
+  display: flex;
+  gap: 1rem;
+  align-items: end;
+  justify-content: space-between;
+  margin: 1.875rem 0;
+}
+.fila :global(.campo) {
+  min-width: 16.25rem;
+}
+.fila > span {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  font-size: 0.85rem;
+}
+@media (max-width: 37.5rem) {
+  .fila {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

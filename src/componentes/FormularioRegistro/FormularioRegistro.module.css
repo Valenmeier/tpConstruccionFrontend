@@ -1,0 +1,22 @@
+.formulario {
+  display: grid;
+  gap: 1.3rem;
+}
+.final {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.final span {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}
+.final a {
+  color: var(--color-primario);
+  text-decoration: underline;
+}
+@media (max-width: 34rem) {
+  .final button {
+    width: 100%;
+  }
+}

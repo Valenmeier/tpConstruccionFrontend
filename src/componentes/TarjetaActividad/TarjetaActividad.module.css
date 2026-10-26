@@ -1,0 +1,56 @@
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-md);
+  background: white;
+  transition: box-shadow 0.2s;
+}
+.tarjeta:hover {
+  box-shadow: var(--sombra-media);
+}
+.cuerpo {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1.25rem;
+  flex: 1;
+}
+.cabecera,
+.pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cabecera h3 {
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+.cuerpo > p {
+  min-height: 2.8rem;
+  font-size: 0.9rem;
+}
+.datos {
+  display: grid;
+  gap: 0.4rem;
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  font-size: 0.85rem;
+}
+.datos span {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+.pie {
+  border-top: 1px solid var(--color-borde);
+  margin-top: auto;
+  padding-top: 1rem;
+}
+.pie strong {
+  color: var(--color-primario);
+}
+.pie small {
+  font-weight: 400;
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}

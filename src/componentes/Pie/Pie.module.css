@@ -1,0 +1,66 @@
+.pie {
+  background: var(--color-primario);
+  color: white;
+}
+.interior {
+  display: grid;
+  grid-template-columns: 1.7fr 0.8fr 0.8fr 1fr;
+  gap: 2.625rem;
+  padding-block: 4rem 3.25rem;
+}
+.info p {
+  max-width: 17.25rem;
+  color: color-mix(in srgb, white 78%, var(--color-primario));
+  font-size: 0.9rem;
+  margin-top: 1.25rem;
+}
+.columna {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: color-mix(in srgb, white 78%, var(--color-primario));
+}
+.columna strong {
+  color: white;
+  font-size: 0.94rem;
+  margin-bottom: 0.4375rem;
+}
+.columna a:hover {
+  color: color-mix(in srgb, var(--color-exito) 32%, white);
+}
+.ubicacion {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.inferior {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  border-top: 1px solid rgb(255 255 255 / 14%);
+  padding-block: 1.25rem;
+  font-size: 0.79rem;
+  color: color-mix(in srgb, white 70%, var(--color-primario));
+}
+@media (max-width: 60rem) {
+  .interior {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 2.25rem;
+  }
+  .info {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 40rem) {
+  .interior {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1rem;
+    padding-block: 2.75rem 2.25rem;
+  }
+  .inferior {
+    flex-direction: column;
+    gap: 0.4375rem;
+  }
+}

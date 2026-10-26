@@ -1,0 +1,34 @@
+.contenedor {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  color: var(--color-primario);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-primario) 9%, white),
+    color-mix(in srgb, white 60%, var(--color-primario))
+  );
+}
+.contenedor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.grande {
+  border-radius: var(--radio-md);
+  aspect-ratio: 3 / 2;
+}
+.etiqueta {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border-radius: 999rem;
+  background: rgb(255 255 255 / 93%);
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}

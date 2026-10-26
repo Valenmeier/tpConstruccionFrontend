@@ -1,0 +1,201 @@
+.disposicion {
+  display: flex;
+  min-height: 100vh;
+}
+.lateral {
+  width: 16.5rem;
+  flex-shrink: 0;
+  background: var(--color-primario);
+  color: white;
+  padding: 1.875rem 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.logotipo {
+  padding-left: 0.5rem;
+}
+.identificador {
+  margin: 3rem 0.75rem 1rem;
+  color: color-mix(in srgb, white 68%, var(--color-primario));
+  font-size: 0.69rem;
+  font-weight: 850;
+  letter-spacing: 0.17em;
+}
+.menu {
+  display: grid;
+  gap: 0.3125rem;
+}
+.enlace {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  color: color-mix(in srgb, white 78%, var(--color-primario));
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background var(--transicion);
+}
+.enlace:hover {
+  background: rgb(255 255 255 / 8%);
+  color: white;
+}
+.activo {
+  background: rgb(255 255 255 / 13%);
+  color: white;
+}
+.activo svg {
+  color: color-mix(in srgb, var(--color-exito) 60%, white);
+}
+.lateralPie {
+  margin-top: auto;
+  padding: 1rem 0.75rem;
+  display: grid;
+  gap: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 15%);
+}
+.lateralPie a {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.87rem;
+  color: color-mix(in srgb, white 80%, var(--color-primario));
+}
+.lateralPie small {
+  color: color-mix(in srgb, white 63%, var(--color-primario));
+  font-size: 0.74rem;
+}
+.area {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.barra {
+  min-height: 5.125rem;
+  padding: 1rem 2.25rem;
+  background: white;
+  border-bottom: 1px solid var(--color-borde);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.barraIzquierda {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.barraIzquierda strong {
+  display: block;
+  font-size: 0.94rem;
+}
+.barraIzquierda span {
+  display: block;
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  font-size: 0.77rem;
+}
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.83rem;
+  font-weight: 750;
+}
+.usuario small {
+  display: block;
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  font-size: 0.74rem;
+  font-weight: 400;
+}
+.avatar {
+  background: color-mix(in srgb, var(--color-primario) 9%, white);
+  color: var(--color-primario);
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
+.activador {
+  display: none;
+  border: 0;
+  background: color-mix(in srgb, var(--color-primario) 9%, white);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--color-primario);
+}
+.contenido {
+  width: 100%;
+  max-width: 81.25rem;
+  flex: 1;
+  padding: 2.25rem;
+  margin: 0 auto;
+}
+.pieInterno {
+  padding: 1rem 2.25rem;
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  font-size: 0.78rem;
+  border-top: 1px solid var(--color-borde);
+}
+.velo {
+  display: none;
+}
+@media (max-width: 66.25rem) {
+  .lateral {
+    width: 14.375rem;
+  }
+  .contenido {
+    padding: 1.625rem;
+  }
+  .barra {
+    padding-inline: 1.625rem;
+  }
+}
+@media (max-width: 49.375rem) {
+  .lateral {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-105%);
+    transition: transform 0.2s;
+    z-index: 90;
+    width: 16.5rem;
+  }
+  .lateralAbierto {
+    transform: translateX(0);
+  }
+  .velo {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0 / 65%);
+    border: 0;
+    z-index: 80;
+  }
+  .activador {
+    display: grid;
+    place-items: center;
+  }
+  .contenido {
+    padding: 1.375rem 1rem;
+  }
+  .barra {
+    padding: 0.875rem 1rem;
+    min-height: 4.375rem;
+  }
+  .pieInterno {
+    padding: 1rem 1rem;
+  }
+}
+@media (max-width: 26.25rem) {
+  .usuario > span:last-child {
+    display: none;
+  }
+}

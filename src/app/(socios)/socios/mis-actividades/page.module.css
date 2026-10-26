@@ -1,0 +1,135 @@
+.disposicion {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(18.125rem, 0.85fr);
+  gap: 1.75rem;
+  align-items: start;
+  margin-top: 2.125rem;
+}
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1.125rem;
+}
+.cabecera h2 {
+  font-size: 1.3rem;
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.lista {
+  display: grid;
+  gap: 0.75rem;
+}
+.fila {
+  background: white;
+  border: 1px solid var(--color-borde);
+  padding: 1.125rem;
+  border-radius: var(--radio-md);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.emoji {
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--color-primario) 8%, white);
+  border-radius: 0.875rem;
+  width: 4.125rem;
+  height: 4.125rem;
+  flex-shrink: 0;
+}
+.info {
+  flex: 1;
+}
+.info strong,
+.info small,
+.info span {
+  display: block;
+}
+.info small {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  font-size: 0.8rem;
+}
+.info span {
+  color: var(--color-primario);
+  font-weight: 750;
+  font-size: 0.85rem;
+  margin-top: 0.4375rem;
+}
+.baja {
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--color-error) 20%, white);
+  color: var(--color-error);
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+.baja:hover {
+  background: color-mix(in srgb, var(--color-error) 6%, white);
+}
+.vacio {
+  background: white;
+  border: 1px dashed var(--color-borde);
+  border-radius: var(--radio-md);
+  padding: 3.5rem 1.25rem;
+  text-align: center;
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+}
+.vacio p {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}
+.resumen {
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-md);
+  background: white;
+  padding: 1.75rem;
+  display: grid;
+  gap: 1rem;
+}
+.resumen h2 {
+  font-size: 1.3rem;
+}
+.numero {
+  color: var(--color-primario);
+  font-size: clamp(2rem, 3.8vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: -0.055em;
+  border-bottom: 1px solid var(--color-borde);
+  padding-bottom: 1.125rem;
+}
+.renglon {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.86rem;
+}
+.renglon > span {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}
+.resumen small {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}
+@media (max-width: 56.25rem) {
+  .disposicion {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 33.125rem) {
+  .fila {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .baja {
+    margin-left: 5rem;
+  }
+  .emoji {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}

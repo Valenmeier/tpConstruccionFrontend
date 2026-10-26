@@ -1,0 +1,65 @@
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.cabecera h1 {
+  margin: 0.25rem 0 0.5rem;
+}
+.formulario {
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+.formTitulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.formTitulo h2 {
+  font-size: 1.2rem;
+}
+.tablaPanel {
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+.resumen {
+  padding: 1.25rem 1.375rem;
+  font-weight: 800;
+}
+.nombre {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+}
+.nombre small {
+  display: block;
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  font-size: 0.77rem;
+}
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+}
+.eliminar {
+  background: none;
+  color: var(--color-error);
+  border: 0;
+  font-weight: 750;
+  font-size: 0.85rem;
+}
+.eliminar:hover {
+  text-decoration: underline;
+}
+@media (max-width: 35.625rem) {
+  .cabecera > button {
+    width: 100%;
+  }
+  .formulario {
+    padding: 1rem;
+  }
+}

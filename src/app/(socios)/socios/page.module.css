@@ -1,0 +1,145 @@
+.saludo {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2.25rem 0 1.625rem;
+}
+.saludo h1,
+.sinSesion h1 {
+  font-size: clamp(2.3rem, 4.5vw, 3.7rem);
+  line-height: 1.1;
+  letter-spacing: -0.055em;
+  margin: 0.625rem 0;
+}
+.saludo p,
+.sinSesion p {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}
+.estadisticas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 3.375rem;
+}
+.estadisticas article {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  background: white;
+  padding: 1.25rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-md);
+}
+.estadisticas svg {
+  color: var(--color-exito);
+  flex-shrink: 0;
+}
+.estadisticas strong {
+  display: block;
+  font-size: 1.42rem;
+  letter-spacing: -0.04em;
+  color: var(--color-primario);
+}
+.estadisticas span {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  font-size: 0.8rem;
+}
+.bloque {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 3.125rem 0 1.5rem;
+}
+.bloque h2 {
+  font-size: 1.75rem;
+  letter-spacing: -0.045em;
+}
+.bloque p {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}
+.actuales {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.875rem;
+}
+.actual {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: white;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-md);
+}
+.emoji {
+  display: grid;
+  place-items: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  background: color-mix(in srgb, var(--color-primario) 8%, white);
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.actual div {
+  flex: 1;
+}
+.actual strong,
+.actual small {
+  display: block;
+}
+.actual small {
+  font-size: 0.81rem;
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}
+.vacio {
+  padding: 2.5rem;
+  border: 1px dashed color-mix(in srgb, var(--color-primario) 25%, white);
+  background: color-mix(in srgb, var(--color-primario) 6%, white);
+  display: grid;
+  justify-items: start;
+  gap: 1rem;
+  border-radius: var(--radio-md);
+}
+.sinSesion {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 4rem 1.25rem 2.25rem;
+  max-width: 45rem;
+  margin: auto;
+}
+.sinSesion > p {
+  max-width: 36.25rem;
+  margin-top: 0.75rem;
+}
+.acciones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.875rem;
+}
+@media (max-width: 55rem) {
+  .estadisticas {
+    grid-template-columns: 1fr 1fr;
+  }
+  .saludo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 38.75rem) {
+  .estadisticas,
+  .actuales {
+    grid-template-columns: 1fr;
+  }
+  .estadisticas {
+    margin-bottom: 1.5rem;
+  }
+  .actual {
+    padding: 0.75rem;
+  }
+}

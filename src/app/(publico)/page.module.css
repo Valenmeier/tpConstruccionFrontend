@@ -1,0 +1,137 @@
+.hero {
+  background: var(--color-primario);
+  color: white;
+}
+.heroInterior {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 5rem;
+}
+.hero h1 {
+  font-size: clamp(2.8rem, 5.4vw, 5.2rem);
+  line-height: 1.07;
+  letter-spacing: -0.05em;
+  margin: 1rem 0;
+}
+.hero h1 em {
+  color: color-mix(in srgb, var(--color-exito) 50%, white);
+  font-style: normal;
+}
+.hero p {
+  color: color-mix(in srgb, white 77%, var(--color-primario));
+  max-width: 36rem;
+}
+.heroInterior > div:last-child {
+  box-shadow: var(--sombra-media);
+}
+.acciones,
+.numeros,
+.titulos,
+.cierre > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.acciones {
+  margin-top: 2rem;
+}
+.enlaceClaro {
+  color: white;
+  font-weight: 700;
+}
+.numeros {
+  margin-top: 3.5rem;
+  color: color-mix(in srgb, white 77%, var(--color-primario));
+}
+.numeros strong {
+  display: block;
+  color: white;
+  font-size: 1.7rem;
+}
+.titulos,
+.cierre > div {
+  justify-content: space-between;
+}
+.titulos {
+  margin-bottom: 2rem;
+}
+.titulos h2,
+.nosotros h2,
+.cierre h2 {
+  font-size: clamp(2rem, 3.7vw, 3.2rem);
+  line-height: 1.15;
+  margin: 0.5rem 0;
+}
+.nosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding-bottom: 6rem;
+}
+.nosotros p {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  margin: 1rem 0 1.5rem;
+}
+.marcaClub {
+  display: grid;
+  place-items: center;
+  min-height: 20rem;
+  border-radius: var(--radio-lg);
+  background: color-mix(in srgb, var(--color-primario) 9%, white);
+  color: var(--color-primario);
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -0.1em;
+}
+.cierre {
+  padding-block: 4rem;
+  background: color-mix(in srgb, var(--color-primario) 9%, white);
+}
+.cierre p {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}
+@media (max-width: 48rem) {
+  .heroInterior,
+  .nosotros {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .heroInterior {
+    padding-block: 3rem;
+  }
+  .numeros {
+    margin-top: 2rem;
+  }
+  .nosotros {
+    padding-bottom: 4rem;
+  }
+  .cierre > div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.beneficios {
+  background: white;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+.beneficios article {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.beneficios svg {
+  color: var(--color-exito);
+  flex-shrink: 0;
+}
+.beneficios h3 {
+  font-size: 1rem;
+}
+.beneficios p {
+  font-size: 0.85rem;
+}

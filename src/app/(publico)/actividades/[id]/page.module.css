@@ -1,0 +1,56 @@
+.grilla {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+.grilla article > span {
+  display: block;
+  margin-top: 1.5rem;
+}
+.datos {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+.datos div {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-borde);
+  padding-bottom: 0.75rem;
+}
+.datos dt {
+  min-width: 6rem;
+  font-weight: 750;
+}
+.datos dd {
+  margin: 0;
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}
+.panel {
+  padding: 1.5rem;
+}
+.panel h2 {
+  margin: 0.75rem 0;
+}
+.panel > p {
+  margin-bottom: 1.25rem;
+}
+.precio {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--color-primario);
+}
+.precio small {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+.enlaceIngreso {
+  margin-top: 0.75rem;
+}
+@media (max-width: 48rem) {
+  .grilla {
+    grid-template-columns: 1fr;
+  }
+}

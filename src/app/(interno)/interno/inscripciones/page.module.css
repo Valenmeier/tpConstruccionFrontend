@@ -1,0 +1,67 @@
+.cabecera {
+  margin-bottom: 1.5rem;
+}
+.cabecera h1 {
+  margin: 0.25rem 0 0.5rem;
+}
+.formulario {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+}
+.formulario h2 {
+  margin-bottom: 1.25rem;
+  font-size: 1.23rem;
+}
+.campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.listado {
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+.listaEncabezado {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.25rem 1.375rem;
+}
+.listaEncabezado h2 {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.listaEncabezado :global(.campo) {
+  min-width: 16.25rem;
+}
+.baja {
+  background: none;
+  border: 1px solid color-mix(in srgb, var(--color-error) 23%, white);
+  padding: 0.4375rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--color-error);
+  font-weight: 700;
+}
+.vacio {
+  padding: 1.875rem;
+  text-align: center;
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}
+@media (max-width: 45rem) {
+  .campos {
+    grid-template-columns: 1fr;
+  }
+  .listaEncabezado {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .listaEncabezado :global(.campo) {
+    min-width: 0;
+  }
+  .formulario {
+    padding: 1.125rem;
+  }
+}

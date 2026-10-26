@@ -1,0 +1,116 @@
+.grilla {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 0.75fr);
+  align-items: start;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+.descripcion {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+.grilla h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.25rem;
+}
+.datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+.datos > div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.datos svg {
+  color: var(--color-exito);
+}
+.datos strong {
+  display: block;
+  font-size: 0.82rem;
+}
+.datos span {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  font-size: 0.88rem;
+}
+.datos strong {
+  color: var(--color-texto);
+}
+.panel {
+  background: white;
+  border-radius: var(--radio-md);
+  border: 1px solid var(--color-borde);
+  padding: 1.75rem;
+  position: sticky;
+  top: 6.875rem;
+  box-shadow: var(--sombra-suave);
+  display: grid;
+  gap: 1rem;
+}
+.panel h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+.precio strong {
+  font-size: 2.1rem;
+  letter-spacing: -0.055em;
+  color: var(--color-primario);
+}
+.precio span {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+}
+.panel p:not([class]) {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  font-size: 0.9rem;
+}
+.cupo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.86rem;
+  border-top: 1px solid var(--color-borde);
+  padding-top: 1rem;
+}
+.cupo strong {
+  color: var(--color-primario);
+}
+.barra {
+  background: color-mix(in srgb, var(--color-primario) 10%, white);
+  height: 0.5rem;
+  border-radius: 1.875rem;
+  overflow: hidden;
+}
+.barra span {
+  display: block;
+  background: var(--color-exito);
+  height: 100%;
+  border-radius: 1.875rem;
+}
+.panel small {
+  color: color-mix(in srgb, var(--color-texto) 67%, white);
+  line-height: 1.6;
+}
+.textoIngreso {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-primario);
+  text-decoration: underline;
+  font-weight: 750;
+}
+@media (max-width: 56.25rem) {
+  .grilla {
+    grid-template-columns: 1fr;
+  }
+  .panel {
+    position: static;
+  }
+}
+@media (max-width: 31.25rem) {
+  .datos {
+    grid-template-columns: 1fr;
+  }
+  .visual {
+    min-height: 13.125rem;
+  }
+}

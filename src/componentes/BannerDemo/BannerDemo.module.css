@@ -1,0 +1,17 @@
+.banner {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radio-sm);
+  background: color-mix(in srgb, var(--color-primario) 7%, white);
+  border: 1px solid color-mix(in srgb, var(--color-primario) 19%, white);
+  color: var(--color-primario);
+  font-size: 0.84rem;
+}
+.banner strong {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
