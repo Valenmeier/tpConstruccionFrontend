@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="31" fill="#123d32"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#e8f2ec" stroke-width="1.5"/>
+  <!-- tronco y ramas del algarrobo -->
+  <path d="M29.5 47 L30.5 31 L33.5 31 L34.5 47 Z" fill="#c9a06b"/>
+  <path d="M31.5 35 L24 28 M32.5 34 L41 27" stroke="#c9a06b" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- copa ancha y baja, típica del algarrobo -->
+  <ellipse cx="32" cy="25" rx="18" ry="7" fill="#17805e"/>
+  <ellipse cx="23" cy="22" rx="9" ry="5.5" fill="#17805e"/>
+  <ellipse cx="41" cy="21.5" rx="9.5" ry="6" fill="#17805e"/>
+  <ellipse cx="32" cy="19" rx="8" ry="5" fill="#1f9a72"/>
+  <!-- suelo -->
+  <rect x="17" y="46.5" width="30" height="2.5" rx="1.25" fill="#e8f2ec"/>
+</svg>
