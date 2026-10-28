@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragmentos :: cabecera('Actividad')}"></head>
+<body>
+<header th:replace="~{fragmentos :: encabezado}"></header>
+
+<main class="contenedor">
+    <h1 th:text="${actividad.id == null} ? 'Nueva actividad' : 'Editar actividad'">Nueva actividad</h1>
+
+    <p class="mensaje mensaje--error" th:if="${error}" th:text="${error}">Mensaje de error</p>
+
+    <!-- th:object enlaza el formulario con el objeto "actividad" del modelo;
+         cada th:field="*{campo}" arma el name, el id y el value de ese atributo. -->
+    <form class="formulario" th:action="@{/secretaria/actividades/guardar}" th:object="${actividad}" method="post">
+        <input type="hidden" th:field="*{id}">
+
+        <label>Nombre
+            <input type="text" th:field="*{nombre}" maxlength="120" required>
+        </label>
+        <label>Disciplina
+            <input type="text" th:field="*{disciplina}" maxlength="80" required>
+        </label>
+        <label>Profesor/a
+            <input type="text" th:field="*{profesor}" maxlength="120" required>
+        </label>
+        <label>Días
+            <input type="text" th:field="*{dias}" maxlength="120" placeholder="Lunes y miércoles" required>
+        </label>
+        <label>Horario
+            <input type="time" th:field="*{horario}" required>
+        </label>
+        <label>Cuota mensual ($)
+            <input type="number" th:field="*{cuotaMensual}" min="0" step="1" required>
+        </label>
+        <label>Edad mínima
+            <input type="number" th:field="*{edadMinima}" min="0" required>
+        </label>
+        <label>Edad máxima
+            <input type="number" th:field="*{edadMaxima}" min="0" required>
+        </label>
+        <label>Cupo máximo
+            <input type="number" th:field="*{cupoMaximo}" min="1" required>
+        </label>
+        <label class="formulario__ancho">Descripción
+            <textarea th:field="*{descripcion}" rows="3"></textarea>
+        </label>
+
+        <div class="formulario__botones">
+            <button type="submit" class="boton">Guardar</button>
+            <a th:href="@{/secretaria/actividades}">Cancelar</a>
+        </div>
+    </form>
+</main>
+
+<footer th:replace="~{fragmentos :: pie}"></footer>
+</body>
+</html>

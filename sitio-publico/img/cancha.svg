@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <!-- cielo -->
+  <rect width="480" height="360" rx="20" fill="#1c5244"/>
+  <circle cx="395" cy="72" r="30" fill="#e9c46a"/>
+  <!-- cancha vista desde arriba -->
+  <rect x="40" y="150" width="400" height="180" rx="8" fill="#17805e"/>
+  <g fill="none" stroke="#e8f2ec" stroke-width="3">
+    <rect x="62" y="168" width="356" height="144"/>
+    <line x1="240" y1="168" x2="240" y2="312"/>
+    <circle cx="240" cy="240" r="30"/>
+    <rect x="62" y="208" width="36" height="64"/>
+    <rect x="382" y="208" width="36" height="64"/>
+  </g>
+  <circle cx="240" cy="240" r="3.5" fill="#e8f2ec"/>
+  <!-- pelota -->
+  <circle cx="300" cy="262" r="9" fill="#ffffff"/>
+  <path d="M296 258 L304 266 M304 258 L296 266" stroke="#123d32" stroke-width="1.5"/>
+  <!-- algarrobo al costado de la cancha -->
+  <path d="M92 300 L98 170 L112 170 L118 300 Z" fill="#a9773f"/>
+  <path d="M104 200 L70 160 M106 190 L146 150" stroke="#a9773f" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="105" cy="140" rx="88" ry="34" fill="#1f9a72"/>
+  <ellipse cx="62" cy="122" rx="44" ry="24" fill="#1f9a72"/>
+  <ellipse cx="150" cy="118" rx="46" ry="26" fill="#1f9a72"/>
+  <ellipse cx="108" cy="104" rx="40" ry="22" fill="#27b083"/>
+</svg>
