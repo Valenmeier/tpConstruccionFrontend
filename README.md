@@ -6,7 +6,9 @@ Trabajo práctico integrador de Taller de Construcción de Software (Universidad
 
 - Juan Patrito
 - Valentín Meier
-- _(completar)_
+- Gustavo Ignacio Gallardo
+- Gaston Maximiliano Gallegos
+- Jose Ignacio Perez Pasini
 
 ## Estructura del repositorio
 
