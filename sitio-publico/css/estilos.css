@@ -4,453 +4,453 @@
 
 /* Colores y fuentes que se repiten en todo el sitio */
 :root {
-    --verde-monte: #123d32;   /* color principal (encabezados, portada, pie) */
-    --verde-cancha: #17805e;  /* botones y acentos */
-    --algarrobo: #8a5a2b;     /* precios */
-    --fondo: #f2f5f3;
-    --blanco: #ffffff;
-    --tinta: #1b2925;         /* texto */
-    --gris: #56655f;
-    --borde: #d3ddd8;
-    --error: #b3261e;
+  --verde-monte: #123d32; /* color principal (encabezados, portada, pie) */
+  --verde-cancha: #17805e; /* botones y acentos */
+  --algarrobo: #8a5a2b; /* precios */
+  --fondo: #f2f5f3;
+  --blanco: #ffffff;
+  --tinta: #1b2925; /* texto */
+  --gris: #56655f;
+  --borde: #d3ddd8;
+  --error: #b3261e;
 
-    --fuente-titulos: "Barlow Condensed", "Arial Narrow", sans-serif;
-    --fuente-texto: "Barlow", Arial, sans-serif;
+  --fuente-titulos: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --fuente-texto: "Barlow", Arial, sans-serif;
 }
 
 /* ---------- Selectores de TIPO (afectan a todas las etiquetas de ese tipo) ---------- */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: var(--fuente-texto);
-    font-size: 1.0625rem;
-    line-height: 1.6;
-    color: var(--tinta);
-    background: var(--fondo);
+  margin: 0;
+  font-family: var(--fuente-texto);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--tinta);
+  background: var(--fondo);
 }
 
 h1,
 h2,
 h3 {
-    margin: 0 0 0.5em;
-    font-family: var(--fuente-titulos);
-    line-height: 1.1;
-    color: var(--verde-monte);
+  margin: 0 0 0.5em;
+  font-family: var(--fuente-titulos);
+  line-height: 1.1;
+  color: var(--verde-monte);
 }
 
 h1 {
-    font-size: clamp(2.4rem, 6vw, 4rem);
+  font-size: clamp(2.4rem, 6vw, 4rem);
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 p {
-    max-width: 65ch;
-    margin: 0 0 1em;
+  max-width: 65ch;
+  margin: 0 0 1em;
 }
 
 a {
-    color: var(--verde-cancha);
+  color: var(--verde-cancha);
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 address {
-    font-style: normal;
-    margin-bottom: 1em;
+  font-style: normal;
+  margin-bottom: 1em;
 }
 
 select,
 input,
 textarea {
-    font: inherit;
-    padding: 0.6rem 0.75rem;
-    border: 1px solid #a9bab3;
-    border-radius: 0.4rem;
-    background: var(--blanco);
-    color: var(--tinta);
+  font: inherit;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #a9bab3;
+  border-radius: 0.4rem;
+  background: var(--blanco);
+  color: var(--tinta);
 }
 
 /* Borde visible al navegar con el teclado */
 :focus-visible {
-    outline: 3px solid var(--verde-cancha);
-    outline-offset: 3px;
+  outline: 3px solid var(--verde-cancha);
+  outline-offset: 3px;
 }
 
 /* ---------- Selectores de CLASE (se reutilizan en varios elementos) ---------- */
 
 .contenedor {
-    width: min(100% - 2.5rem, 70rem);
-    margin-inline: auto;
+  width: min(100% - 2.5rem, 70rem);
+  margin-inline: auto;
 }
 
 .pagina {
-    padding-block: 2.5rem 4rem;
+  padding-block: 2.5rem 4rem;
 }
 
 /* Encabezado y menú */
 .encabezado {
-    background: var(--blanco);
-    border-bottom: 1px solid var(--borde);
+  background: var(--blanco);
+  border-bottom: 1px solid var(--borde);
 }
 
 .encabezado-contenido {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding-block: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.75rem;
 }
 
 .marca {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-family: var(--fuente-titulos);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--verde-monte);
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--verde-monte);
+  text-decoration: none;
 }
 
 .menu {
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .menu a {
-    padding-block: 0.25rem;
-    border-bottom: 3px solid transparent;
-    color: var(--tinta);
-    font-weight: 600;
-    text-decoration: none;
+  padding-block: 0.25rem;
+  border-bottom: 3px solid transparent;
+  color: var(--tinta);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .menu a:hover {
-    color: var(--verde-cancha);
+  color: var(--verde-cancha);
 }
 
 /* Selector de ATRIBUTO: subraya el enlace de la página en la que estamos */
 .menu a[aria-current="page"] {
-    border-bottom-color: var(--verde-cancha);
-    color: var(--verde-monte);
+  border-bottom-color: var(--verde-cancha);
+  color: var(--verde-monte);
 }
 
 /* Botones */
 .botones {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .boton {
-    display: inline-block;
-    padding: 0.7rem 1.25rem;
-    border: 2px solid var(--verde-cancha);
-    border-radius: 0.5rem;
-    background: var(--verde-cancha);
-    color: var(--blanco);
-    font: inherit;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
+  display: inline-block;
+  padding: 0.7rem 1.25rem;
+  border: 2px solid var(--verde-cancha);
+  border-radius: 0.5rem;
+  background: var(--verde-cancha);
+  color: var(--blanco);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .boton:hover {
-    border-color: var(--verde-monte);
-    background: var(--verde-monte);
+  border-color: var(--verde-monte);
+  background: var(--verde-monte);
 }
 
 .boton-claro {
-    border-color: var(--blanco);
-    background: transparent;
+  border-color: var(--blanco);
+  background: transparent;
 }
 
 .boton-claro:hover {
-    border-color: var(--blanco);
-    background: var(--blanco);
-    color: var(--verde-monte);
+  border-color: var(--blanco);
+  background: var(--blanco);
+  color: var(--verde-monte);
 }
 
 .boton-secundario {
-    border-color: var(--verde-monte);
-    background: transparent;
-    color: var(--verde-monte);
+  border-color: var(--verde-monte);
+  background: transparent;
+  color: var(--verde-monte);
 }
 
 .boton-secundario:hover {
-    color: var(--blanco);
+  color: var(--blanco);
 }
 
 /* Portada del inicio */
 .portada {
-    padding-block: 3.5rem;
-    background: var(--verde-monte);
-    color: var(--blanco);
+  padding-block: 3.5rem;
+  background: var(--verde-monte);
+  color: var(--blanco);
 }
 
 .portada h1 {
-    max-width: 14ch;
-    color: var(--blanco);
+  max-width: 14ch;
+  color: var(--blanco);
 }
 
 .portada-contenido {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 2.5rem;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
 }
 
 .portada-texto {
-    font-size: 1.25rem;
-    color: #d6e7df;
+  font-size: 1.25rem;
+  color: #d6e7df;
 }
 
 .portada-imagen {
-    border-radius: 1rem;
+  border-radius: 1rem;
 }
 
 /* Bloques del inicio */
 .columnas {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2.5rem;
-    padding-block: 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+  padding-block: 3rem;
 }
 
 .destacado {
-    align-self: start;
-    padding: 1.5rem;
-    border-left: 6px solid var(--algarrobo);
-    background: var(--blanco);
+  align-self: start;
+  padding: 1.5rem;
+  border-left: 6px solid var(--algarrobo);
+  background: var(--blanco);
 }
 
 .destacado ul,
 .destacado ol {
-    margin: 0 0 1em;
-    padding-left: 1.25rem;
+  margin: 0 0 1em;
+  padding-left: 1.25rem;
 }
 
 .ubicacion {
-    padding-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .ubicacion-datos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 1.5rem;
-    border: 1px solid var(--borde);
-    background: var(--blanco);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--borde);
+  background: var(--blanco);
 }
 
 /* Filtros del catálogo */
 .filtros {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    padding: 1.25rem;
-    border: 1px solid var(--borde);
-    border-radius: 0.75rem;
-    background: var(--blanco);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--borde);
+  border-radius: 0.75rem;
+  background: var(--blanco);
 }
 
 .filtros label {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-weight: 600;
 }
 
 .filtros select,
 .filtros input {
-    height: 2.75rem;
+  height: 2.75rem;
 }
 
 /* Selector de ATRIBUTO: solo los inputs numéricos (el filtro de edad) */
 input[type="number"] {
-    width: 8rem;
+  width: 8rem;
 }
 
 /* Tarjeta de cada actividad (la genera script.js) */
 .tarjeta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-    padding: 1.25rem;
-    border: 1px solid var(--borde);
-    border-top: 6px solid var(--verde-cancha);
-    border-radius: 0.5rem;
-    background: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem;
+  border: 1px solid var(--borde);
+  border-top: 6px solid var(--verde-cancha);
+  border-radius: 0.5rem;
+  background: var(--blanco);
 }
 
 .tarjeta h3 {
-    margin: 0;
+  margin: 0;
 }
 
 .tarjeta-disciplina {
-    margin: 0;
-    color: var(--gris);
+  margin: 0;
+  color: var(--gris);
 }
 
 /* El horario se ve grande, como en la pizarra del club */
 .tarjeta-horario {
-    margin: 0.3rem 0;
-    font-family: var(--fuente-titulos);
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 1;
-    color: var(--verde-cancha);
+  margin: 0.3rem 0;
+  font-family: var(--fuente-titulos);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--verde-cancha);
 }
 
 .tarjeta-dias {
-    margin: 0;
-    font-weight: 600;
+  margin: 0;
+  font-weight: 600;
 }
 
 .tarjeta-datos {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .tarjeta-cuota {
-    margin: auto 0 0.5rem;
-    padding-top: 0.75rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--algarrobo);
+  margin: auto 0 0.5rem;
+  padding-top: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--algarrobo);
 }
 
 .tarjeta .boton {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 
 /* Formulario de preinscripción */
 .disposicion-formulario {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
 }
 
 .campo {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .campo label {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .campo-ancho {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .mensaje-error {
-    min-height: 1.4em;
-    margin: 0;
-    font-size: 0.95rem;
-    color: var(--error);
+  min-height: 1.4em;
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--error);
 }
 
 /* Selector de ATRIBUTO: JavaScript pone aria-invalid="true" en los campos con error */
 [aria-invalid="true"] {
-    border-color: var(--error);
-    background: #fdf1f0;
+  border-color: var(--error);
+  background: #fdf1f0;
 }
 
 /* ---------- Selectores de ID (elementos únicos de una página) ---------- */
 
 #resultado-filtros {
-    color: var(--gris);
+  color: var(--gris);
 }
 
 #lista-actividades {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
 }
 
 #formulario-preinscripcion {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem 1.5rem;
-    padding: 1.5rem;
-    border: 1px solid var(--borde);
-    border-radius: 0.75rem;
-    background: var(--blanco);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--borde);
+  border-radius: 0.75rem;
+  background: var(--blanco);
 }
 
 #mensaje-exito {
-    max-width: none;
-    padding: 1rem 1.25rem;
-    border-left: 6px solid var(--verde-cancha);
-    background: #e1f1e8;
-    font-weight: 600;
+  max-width: none;
+  padding: 1rem 1.25rem;
+  border-left: 6px solid var(--verde-cancha);
+  background: #e1f1e8;
+  font-weight: 600;
 }
 
 /* Pie de página */
 .pie {
-    padding-block: 1.5rem;
-    background: var(--verde-monte);
-    color: #d6e7df;
-    font-size: 0.95rem;
+  padding-block: 1.5rem;
+  background: var(--verde-monte);
+  color: #d6e7df;
+  font-size: 0.95rem;
 }
 
 .pie p {
-    margin: 0.25rem 0;
+  margin: 0.25rem 0;
 }
 
 /* ---------- Diseño responsivo (media queries) ---------- */
 
 /* Tablet: dos tarjetas por fila y los bloques uno debajo del otro */
 @media (max-width: 900px) {
-    #lista-actividades {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  #lista-actividades {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .portada-contenido,
-    .columnas,
-    .disposicion-formulario {
-        grid-template-columns: 1fr;
-    }
+  .portada-contenido,
+  .columnas,
+  .disposicion-formulario {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Celular: las tarjetas de actividades se ven en UNA columna */
 @media (max-width: 600px) {
-    #lista-actividades,
-    #formulario-preinscripcion,
-    .ubicacion-datos {
-        grid-template-columns: 1fr;
-    }
+  #lista-actividades,
+  #formulario-preinscripcion,
+  .ubicacion-datos {
+    grid-template-columns: 1fr;
+  }
 
-    .encabezado-contenido {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .encabezado-contenido {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .portada {
-        padding-block: 2.5rem;
-    }
+  .portada {
+    padding-block: 2.5rem;
+  }
 }

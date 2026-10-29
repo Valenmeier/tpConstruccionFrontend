@@ -1,65 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Actividades, horarios, edades y cuotas del Club Los Algarrobos.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Actividades, horarios, edades y cuotas del Club Los Algarrobos."
+    />
     <title>Actividades y horarios · Club Los Algarrobos</title>
-    <link rel="icon" href="img/logo.svg">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600&display=swap">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="img/logo.svg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600&display=swap"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
     <script src="js/script.js" defer></script>
-</head>
-<body>
-
-<header class="encabezado">
-    <div class="contenedor encabezado-contenido">
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class="contenedor encabezado-contenido">
         <a class="marca" href="index.html">
-            <img src="img/logo.svg" alt="Escudo del club: un algarrobo dentro de un círculo verde" width="48" height="48">
-            <span>Club Los Algarrobos</span>
+          <img
+            src="img/logo.svg"
+            alt="Escudo del club: un algarrobo dentro de un círculo verde"
+            width="48"
+            height="48"
+          />
+          <span>Club Los Algarrobos</span>
         </a>
         <nav aria-label="Menú principal">
-            <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="actividades.html" aria-current="page">Actividades</a></li>
-                <li><a href="preinscripcion.html">Preinscripción</a></li>
-            </ul>
+          <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+              <a href="actividades.html" aria-current="page">Actividades</a>
+            </li>
+            <li><a href="preinscripcion.html">Preinscripción</a></li>
+          </ul>
         </nav>
-    </div>
-</header>
+      </div>
+    </header>
 
-<main class="contenedor pagina">
-    <h1>Actividades y horarios</h1>
-    <p>Elegí una disciplina o escribí tu edad para ver solo las actividades que te corresponden.</p>
+    <main class="contenedor pagina">
+      <h1>Actividades y horarios</h1>
+      <p>
+        Elegí una disciplina o escribí tu edad para ver solo las actividades que
+        te corresponden.
+      </p>
 
-    <!-- Filtros: cada cambio dispara un evento que vuelve a dibujar la lista (ver script.js) -->
-    <div class="filtros" role="search">
+      <!-- Filtros: cada cambio dispara un evento que vuelve a dibujar la lista (ver script.js) -->
+      <div class="filtros" role="search">
         <label>
-            Disciplina
-            <select id="filtro-disciplina">
-                <option value="">Todas</option>
-                <!-- Las demás opciones se agregan con JavaScript -->
-            </select>
+          Disciplina
+          <select id="filtro-disciplina">
+            <option value="">Todas</option>
+            <!-- Las demás opciones se agregan con JavaScript -->
+          </select>
         </label>
         <label>
-            Tu edad
-            <input type="number" id="filtro-edad" min="1" max="99" placeholder="Ej: 10">
+          Tu edad
+          <input
+            type="number"
+            id="filtro-edad"
+            min="1"
+            max="99"
+            placeholder="Ej: 10"
+          />
         </label>
-        <button type="button" id="limpiar-filtros" class="boton boton-secundario">Limpiar filtros</button>
-    </div>
+        <button
+          type="button"
+          id="limpiar-filtros"
+          class="boton boton-secundario"
+        >
+          Limpiar filtros
+        </button>
+      </div>
 
-    <p id="resultado-filtros" aria-live="polite"></p>
+      <p id="resultado-filtros" aria-live="polite"></p>
 
-    <!-- Acá JavaScript genera una tarjeta (article) por cada actividad -->
-    <div id="lista-actividades"></div>
-</main>
+      <!-- Acá JavaScript genera una tarjeta (article) por cada actividad -->
+      <div id="lista-actividades"></div>
+    </main>
 
-<footer class="pie">
-    <div class="contenedor">
-        <p>Club Social y Deportivo Los Algarrobos. Calle Los Algarrobos 1234, Córdoba.</p>
-        <p>Trabajo práctico de Taller de Construcción de Software, Universidad Siglo 21.</p>
-    </div>
-</footer>
-
-</body>
+    <footer class="pie">
+      <div class="contenedor">
+        <p>
+          Club Social y Deportivo Los Algarrobos. Calle Los Algarrobos 1234,
+          Córdoba.
+        </p>
+        <p>
+          Trabajo práctico de Taller de Construcción de Software, Universidad
+          Siglo 21.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

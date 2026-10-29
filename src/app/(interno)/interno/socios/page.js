@@ -34,7 +34,6 @@ export default function GestionSocios() {
   const [aviso, setAviso] = useState(null);
   const [hoy, setHoy] = useState(null);
 
- 
   useEffect(() => setHoy(new Date()), []);
 
   const filtrados = socios

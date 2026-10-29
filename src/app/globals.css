@@ -253,7 +253,6 @@ textarea {
   text-decoration: underline;
 }
 
-
 .tabla-desborde {
   overflow-x: auto;
   border-radius: var(--radio-md);

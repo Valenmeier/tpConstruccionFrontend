@@ -44,14 +44,14 @@ src/main/java/ar/edu/siglo21/socioclub/
 
 ## Endpoints implementados
 
-| Verbo | Ruta | Respuestas |
-|---|---|---|
-| GET | `/api/actividades` (acepta `?disciplina=`) | 200 |
-| GET | `/api/actividades/{id}` | 200 / 404 |
-| POST | `/api/actividades` | 201 / 400 |
-| PUT | `/api/actividades/{id}` | 200 / 400 / 404 / 409 |
-| DELETE | `/api/actividades/{id}` (baja lógica, solo sin inscriptos activos) | 204 / 404 / 409 |
-| GET | `/api/socios` | 200 |
-| GET | `/api/inscripciones` | 200 |
+| Verbo  | Ruta                                                               | Respuestas            |
+| ------ | ------------------------------------------------------------------ | --------------------- |
+| GET    | `/api/actividades` (acepta `?disciplina=`)                         | 200                   |
+| GET    | `/api/actividades/{id}`                                            | 200 / 404             |
+| POST   | `/api/actividades`                                                 | 201 / 400             |
+| PUT    | `/api/actividades/{id}`                                            | 200 / 400 / 404 / 409 |
+| DELETE | `/api/actividades/{id}` (baja lógica, solo sin inscriptos activos) | 204 / 404 / 409       |
+| GET    | `/api/socios`                                                      | 200                   |
+| GET    | `/api/inscripciones`                                               | 200                   |
 
 Los errores vuelven como `{"error": "mensaje"}` (y `"regla": "RN1"` cuando corresponde).

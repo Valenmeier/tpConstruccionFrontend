@@ -1,60 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragmentos :: cabecera('Actividades')}"></head>
-<body>
-<header th:replace="~{fragmentos :: encabezado}"></header>
+  <head th:replace="~{fragmentos :: cabecera('Actividades')}"></head>
+  <body>
+    <header th:replace="~{fragmentos :: encabezado}"></header>
 
-<main class="contenedor">
-    <div class="titulo">
+    <main class="contenedor">
+      <div class="titulo">
         <h1>Actividades</h1>
-        <a class="boton" th:href="@{/secretaria/actividades/nueva}">+ Nueva actividad</a>
-    </div>
+        <a class="boton" th:href="@{/secretaria/actividades/nueva}"
+          >+ Nueva actividad</a
+        >
+      </div>
 
-    <p class="mensaje mensaje--exito" th:if="${exito}" th:text="${exito}">Mensaje de éxito</p>
-    <p class="mensaje mensaje--error" th:if="${error}" th:text="${error}">Mensaje de error</p>
+      <p class="mensaje mensaje--exito" th:if="${exito}" th:text="${exito}">
+        Mensaje de éxito
+      </p>
+      <p class="mensaje mensaje--error" th:if="${error}" th:text="${error}">
+        Mensaje de error
+      </p>
 
-    <div class="tabla-contenedor" th:unless="${#lists.isEmpty(actividades)}">
+      <div class="tabla-contenedor" th:unless="${#lists.isEmpty(actividades)}">
         <table>
-            <thead>
+          <thead>
             <tr>
-                <th>Actividad</th>
-                <th>Disciplina</th>
-                <th>Días y horario</th>
-                <th>Edades</th>
-                <th>Profesor/a</th>
-                <th>Cuota</th>
-                <th>Cupo disponible</th>
-                <th>Acciones</th>
+              <th>Actividad</th>
+              <th>Disciplina</th>
+              <th>Días y horario</th>
+              <th>Edades</th>
+              <th>Profesor/a</th>
+              <th>Cuota</th>
+              <th>Cupo disponible</th>
+              <th>Acciones</th>
             </tr>
-            </thead>
-            <tbody>
-            <tr th:each="actividad : ${actividades}"
-                th:classappend="${actividad.cupoDisponible == 0} ? 'sin-cupo'">
-                <td th:text="${actividad.nombre}">Yoga</td>
-                <td th:text="${actividad.disciplina}">Bienestar</td>
-                <td th:text="${actividad.dias + ' · ' + actividad.horario}">Martes y jueves · 09:00</td>
-                <td th:text="${actividad.edadMinima + ' a ' + actividad.edadMaxima + ' años'}">16 a 99 años</td>
-                <td th:text="${actividad.profesor}">Inés Arguello</td>
-                <td th:text="${'$ ' + #numbers.formatDecimal(actividad.cuotaMensual, 1, 'POINT', 0, 'COMMA')}">$ 17.000</td>
-                <td>
-                    <span class="cupo" th:text="${actividad.cupoDisponible + ' de ' + actividad.cupoMaximo}">1 de 15</span>
-                    <span class="etiqueta" th:if="${actividad.cupoDisponible == 0}">Sin cupo</span>
-                </td>
-                <td class="acciones">
-                    <a th:href="@{/secretaria/actividades/{id}/editar(id=${actividad.id})}">Editar</a>
-                    <form th:action="@{/secretaria/actividades/{id}/eliminar(id=${actividad.id})}" method="post"
-                          onsubmit="return confirm('¿Eliminar esta actividad?');">
-                        <button type="submit" class="boton-link boton-link--peligro">Eliminar</button>
-                    </form>
-                </td>
+          </thead>
+          <tbody>
+            <tr
+              th:each="actividad : ${actividades}"
+              th:classappend="${actividad.cupoDisponible == 0} ? 'sin-cupo'"
+            >
+              <td th:text="${actividad.nombre}">Yoga</td>
+              <td th:text="${actividad.disciplina}">Bienestar</td>
+              <td th:text="${actividad.dias + ' · ' + actividad.horario}">
+                Martes y jueves · 09:00
+              </td>
+              <td
+                th:text="${actividad.edadMinima + ' a ' + actividad.edadMaxima + ' años'}"
+              >
+                16 a 99 años
+              </td>
+              <td th:text="${actividad.profesor}">Inés Arguello</td>
+              <td
+                th:text="${'$ ' + #numbers.formatDecimal(actividad.cuotaMensual, 1, 'POINT', 0, 'COMMA')}"
+              >
+                $ 17.000
+              </td>
+              <td>
+                <span
+                  class="cupo"
+                  th:text="${actividad.cupoDisponible + ' de ' + actividad.cupoMaximo}"
+                  >1 de 15</span
+                >
+                <span class="etiqueta" th:if="${actividad.cupoDisponible == 0}"
+                  >Sin cupo</span
+                >
+              </td>
+              <td class="acciones">
+                <a
+                  th:href="@{/secretaria/actividades/{id}/editar(id=${actividad.id})}"
+                  >Editar</a
+                >
+                <form
+                  th:action="@{/secretaria/actividades/{id}/eliminar(id=${actividad.id})}"
+                  method="post"
+                  onsubmit="return confirm('¿Eliminar esta actividad?');"
+                >
+                  <button type="submit" class="boton-link boton-link--peligro">
+                    Eliminar
+                  </button>
+                </form>
+              </td>
             </tr>
-            </tbody>
+          </tbody>
         </table>
-    </div>
+      </div>
 
-    <p th:if="${#lists.isEmpty(actividades)}">No hay actividades cargadas.</p>
-</main>
+      <p th:if="${#lists.isEmpty(actividades)}">No hay actividades cargadas.</p>
+    </main>
 
-<footer th:replace="~{fragmentos :: pie}"></footer>
-</body>
+    <footer th:replace="~{fragmentos :: pie}"></footer>
+  </body>
 </html>

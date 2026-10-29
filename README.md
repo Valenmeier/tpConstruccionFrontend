@@ -10,13 +10,13 @@ Trabajo práctico integrador de Taller de Construcción de Software (Universidad
 
 ## Estructura del repositorio
 
-| Carpeta | Qué es | Tecnologías |
-|---|---|---|
-| `sitio-publico/` | Parte A: sitio del club para los vecinos | HTML5, CSS3, JavaScript |
-| `src/` (raíz) | Frontend del grupo: app de socios y panel interno | Next.js, React |
-| `backend/` | Partes B y C: secretaría y API REST | Spring Boot, Thymeleaf, Spring Data JPA, MySQL |
-| `base-datos/` | Script de creación y datos iniciales | MySQL |
-| `docs/` | Plan de trabajo y bitácora de IA | |
+| Carpeta          | Qué es                                            | Tecnologías                                    |
+| ---------------- | ------------------------------------------------- | ---------------------------------------------- |
+| `sitio-publico/` | Parte A: sitio del club para los vecinos          | HTML5, CSS3, JavaScript                        |
+| `src/` (raíz)    | Frontend del grupo: app de socios y panel interno | Next.js, React                                 |
+| `backend/`       | Partes B y C: secretaría y API REST               | Spring Boot, Thymeleaf, Spring Data JPA, MySQL |
+| `base-datos/`    | Script de creación y datos iniciales              | MySQL                                          |
+| `docs/`          | Plan de trabajo y bitácora de IA                  |                                                |
 
 ## Cómo levantar el proyecto
 
@@ -39,12 +39,12 @@ Más detalle en [backend/README.md](backend/README.md).
 
 ## Datos de prueba
 
-| DNI | Socio | Para probar |
-|---|---|---|
-| 40123456 | Lucía Pérez | Tiene 2 actividades (descuento 10 %) |
-| 42123456 | Pedro Díaz | Tiene 3 actividades (RN5: máximo alcanzado) |
-| 38123456 | María López | Cuota MOROSA (RN4) |
-| 33123456 | Bruno Suárez | Cuota MOROSA (RN4) |
-| 45123456 | Tomás Gómez | 11 años: no entra en Básquet juvenil, de 12 a 17 (RN3) |
+| DNI      | Socio        | Para probar                                            |
+| -------- | ------------ | ------------------------------------------------------ |
+| 40123456 | Lucía Pérez  | Tiene 2 actividades (descuento 10 %)                   |
+| 42123456 | Pedro Díaz   | Tiene 3 actividades (RN5: máximo alcanzado)            |
+| 38123456 | María López  | Cuota MOROSA (RN4)                                     |
+| 33123456 | Bruno Suárez | Cuota MOROSA (RN4)                                     |
+| 45123456 | Tomás Gómez  | 11 años: no entra en Básquet juvenil, de 12 a 17 (RN3) |
 
 Yoga arranca con 14 de 15 lugares ocupados (para probar RN1 y la baja de actividades con inscriptos).
